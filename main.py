@@ -1,9 +1,7 @@
 from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult
 from astrbot.api.star import Context, Star, register
 from astrbot.api import logger
-import requests
-import json
-import ykt_handler
+from . import ykt_handler
 
 @register("UJS Assis", "Cacciatore", "A UJS bot assis", "1.0")
 class MyPlugin(Star):
