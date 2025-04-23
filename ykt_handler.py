@@ -1,12 +1,13 @@
 import requests
 
 # TODO: Define the request route
-def get_room_bill():
+def get_room_bill(room = "417"):
     """
     Args:
+        room: str, the code like 417 room address
 
     Return:
-        room_address: str
+        room: str
         current_price: str
         current_time: str
     """
@@ -37,7 +38,7 @@ def get_room_bill():
         "campus": "校本部",
         "building": "F区",
         "floor": "7",
-        "room": "7-4-417"
+        "room": f"7-4-{room}"
     }
 
     response = requests.post(url, headers=headers, data=data)
